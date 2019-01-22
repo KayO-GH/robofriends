@@ -2,6 +2,7 @@ import React from 'react';
 
 const Card = (props) => {
     // We use tachyons for easy styling classes
+    // eslint-disable-next-line
     const { id, name, _, email } = props.robot;
     return(
         <div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
