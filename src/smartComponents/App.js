@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import CardList from '../functionalComponents/CardList';
 import SearchBox from '../functionalComponents/SearchBox';
 import Scroll from '../functionalComponents/Scroll';
 import ErrorBoundary from './ErrorBoundary';
 import './App.css';
 
+import { setSearchFieldAction } from '../actions';
+
+//the state passed in here is the state from the root reducer
+const mapStateToProps = state => ({
+    searchField: state.searchField
+});
+
+const mapDispatchToProps = dispatch => ({
+    onSearchChange: (event) => dispatch(setSearchFieldAction(event.target.value))
+});
+
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            robots: [],
-            searchField: ''
+            robots: []
         }
     }
 
@@ -22,13 +33,9 @@ class App extends Component {
             });
     }
 
-    // to avoid problems with 'this' in your class fnxs, use arrow fxns
-    onSearchChange = (event) => {
-        this.setState({ searchFiecomponentsld: event.target.value });
-    }
-
     render() {
-        const { robots, searchField } = this.state;
+        const { robots } = this.state;
+        const { searchField, onSearchChange } = this.props;
         const filteredRobots = robots.filter(robot => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase())
         });
@@ -37,7 +44,7 @@ class App extends Component {
             (
                 <div className='tc'>
                     <h1 className='f1'>RoboFriends</h1>
-                    <SearchBox searchChange={this.onSearchChange} />
+                    <SearchBox searchChange={onSearchChange} />
                     <Scroll>
                         <ErrorBoundary>
                             <CardList robots={filteredRobots} />
@@ -48,4 +55,4 @@ class App extends Component {
     }
 };
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
