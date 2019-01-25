@@ -6,7 +6,7 @@ const CardList = ({ robots }) => {//destructure props in parameter
         <div>
             {
                 robots.map(
-                    (_, i) => <Card key={i} robot={robots[i]} />
+                    (robot, i) => <Card key={i} robot={robot} />
                 )
             }
         </div>
