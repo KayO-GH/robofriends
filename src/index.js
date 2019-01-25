@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';//listens for and acts on functions that run in our actions
 import './index.css';
-import App from './smartComponents/App';
+import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
 import { searchRobotsReducer, fetchRobotsReducer } from './reducers';
