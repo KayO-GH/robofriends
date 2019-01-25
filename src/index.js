@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import './index.css';
 import App from './smartComponents/App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
+import { searchRobotsReducer } from './reducers';
+
+const store = createStore(searchRobotsReducer);
 
 ReactDOM.render(
-    <App />,
+    //Provider component wraps the app, allowing all child components to access the store using connect()
+    <Provider store={store}>
+        <App />
+    </Provider>,
     document.getElementById('root')
 );
 
