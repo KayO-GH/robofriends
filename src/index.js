@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
-import thunkMiddleware from 'redux-thunk';
+import thunkMiddleware from 'redux-thunk';//listens for and acts on functions that run in our actions
 import './index.css';
 import App from './smartComponents/App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
-import { searchRobotsReducer } from './reducers';
+import { searchRobotsReducer, fetchRobotsReducer } from './reducers';
 
 const logger = createLogger();
-const store = createStore(searchRobotsReducer, applyMiddleware(logger));
+
+const rootReducer = combineReducers({searchRobotsReducer, fetchRobotsReducer});
+
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware,logger));
 
 ReactDOM.render(
     //Provider component wraps the app, allowing all child components to access the store using connect()
