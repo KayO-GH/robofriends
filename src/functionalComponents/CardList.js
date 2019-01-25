@@ -2,12 +2,11 @@ import React from 'react';
 import Card from './Card';
 
 const CardList = ({ robots }) => {//destructure props in parameter
-    throw new Error('NOOOOOOO!');
     return (
         <div>
             {
                 robots.map(
-                    (_, i) => <Card key={i} robot={robots[i]} />
+                    (robot, i) => <Card key={i} robot={robot} />
                 )
             }
         </div>
