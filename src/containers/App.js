@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
-import ErrorBoundary from './ErrorBoundary';
+import ErrorBoundary from '../components/ErrorBoundary';
 import './App.css';
 
 import { setSearchFieldAction, fetchRobotsAction } from '../actions';
