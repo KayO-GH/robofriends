@@ -1,7 +1,12 @@
-import { shallow} from "enzyme";
+import { shallow } from "enzyme";
 import React from "react";
 import Card from "./Card";
 
 it("renders a card component", () => {
-  expect(shallow(<Card robot={{}} />)).toMatchSnapshot();
+  const mockRobot = {
+    id: 1,
+    name: "John Doe",
+    email: "john@doe.com",
+  };
+  expect(shallow(<Card robot={mockRobot} />)).toMatchSnapshot();
 });

@@ -4,7 +4,13 @@ exports[`renders a card component 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    robot={Object {}}
+    robot={
+      Object {
+        "email": "john@doe.com",
+        "id": 1,
+        "name": "John Doe",
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -23,11 +29,15 @@ ShallowWrapper {
       "children": Array [
         <img
           alt="robots"
-          src="https://robohash.org/undefined?size=200x200"
+          src="https://robohash.org/1?size=200x200"
         />,
         <div>
-          <h2 />
-          <p />
+          <h2>
+            John Doe
+          </h2>
+          <p>
+            john@doe.com
+          </p>
         </div>,
       ],
       "className": "tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5",
@@ -40,7 +50,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "robots",
-          "src": "https://robohash.org/undefined?size=200x200",
+          "src": "https://robohash.org/1?size=200x200",
         },
         "ref": null,
         "rendered": null,
@@ -52,8 +62,12 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h2 />,
-            <p />,
+            <h2>
+              John Doe
+            </h2>,
+            <p>
+              john@doe.com
+            </p>,
           ],
         },
         "ref": null,
@@ -63,10 +77,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "John Doe",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "John Doe",
             "type": "h2",
           },
           Object {
@@ -74,10 +88,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "john@doe.com",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "john@doe.com",
             "type": "p",
           },
         ],
@@ -95,11 +109,15 @@ ShallowWrapper {
         "children": Array [
           <img
             alt="robots"
-            src="https://robohash.org/undefined?size=200x200"
+            src="https://robohash.org/1?size=200x200"
           />,
           <div>
-            <h2 />
-            <p />
+            <h2>
+              John Doe
+            </h2>
+            <p>
+              john@doe.com
+            </p>
           </div>,
         ],
         "className": "tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5",
@@ -112,7 +130,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "robots",
-            "src": "https://robohash.org/undefined?size=200x200",
+            "src": "https://robohash.org/1?size=200x200",
           },
           "ref": null,
           "rendered": null,
@@ -124,8 +142,12 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2 />,
-              <p />,
+              <h2>
+                John Doe
+              </h2>,
+              <p>
+                john@doe.com
+              </p>,
             ],
           },
           "ref": null,
@@ -135,10 +157,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "John Doe",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "John Doe",
               "type": "h2",
             },
             Object {
@@ -146,10 +168,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "john@doe.com",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "john@doe.com",
               "type": "p",
             },
           ],
