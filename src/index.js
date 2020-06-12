@@ -14,7 +14,7 @@ const logger = createLogger();
 
 const rootReducer = combineReducers({searchRobotsReducer, fetchRobotsReducer});
 
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware,logger));
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 ReactDOM.render(
     //Provider component wraps the app, allowing all child components to access the store using connect()
