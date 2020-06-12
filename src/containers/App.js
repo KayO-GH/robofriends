@@ -15,7 +15,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   onSearchChange: (event) => dispatch(setSearchFieldAction(event.target.value)),
-  onFetchRobots: () => fetchRobotsAction(dispatch), //could very well have been dispatch(fetchRobotsAction()), but let's preserve our sanity, seeing how the function was actually defined in actions.js
+  onFetchRobots: () => dispatch(fetchRobotsAction()), //dispatch(fetchRobotsAction()) because int the weird JS world it's defined in actions.js as a function in a function. LESSON: Stick to the context API. The world of React has changed.
 });
 
 class App extends Component {

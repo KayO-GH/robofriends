@@ -10,9 +10,9 @@ export const setSearchFieldAction = (text) => ({
     payload: text
 });
 
-export const fetchRobotsAction = (dispatch) => {
+export const fetchRobotsAction = () => (dispatch) => {//things like this are why we'll stick to the context API... LOL
     dispatch({ type: REQUEST_ROBOTS_PENDING });
-    //do asynchronous call
+    //do asynchronous call 
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then(users => dispatch({ 
