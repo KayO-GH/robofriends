@@ -3,7 +3,6 @@ import Card from "./Card";
 
 const CardList = ({ robots }) => {
   //destructure props in parameter
-  console.log("CardList");
   return (
     <div>
       {robots.map((robot, i) => (

@@ -6,8 +6,11 @@ class Header extends Component {
   }
 
   render() {
-    console.log("Header");
-    return <h1 className="f1">RoboFriends</h1>;
+    return (
+      <div>
+        <h1 className="f1">RoboFriends</h1>
+      </div>
+    );
   }
 }
 
