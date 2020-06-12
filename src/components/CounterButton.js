@@ -16,9 +16,9 @@ class CounterButton extends Component {
   }
 
   render() {
-    console.log("counter");
     return (
       <button
+        id="counter"
         color={this.props.color}
         onClick={() => this.setState((state) => ({ count: state.count + 1 }))}
       >
@@ -27,3 +27,5 @@ class CounterButton extends Component {
     );
   }
 }
+
+export default CounterButton;
