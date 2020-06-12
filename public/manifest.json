@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Robofriends",
+  "name": "Robofriends | Where robots make friends",
   "icons": [
     {
       "src": "favicon.ico",
@@ -13,7 +13,7 @@
       "type": "image/png"
     },
     {
-      "src": "android-chrome-192x192.png",
+      "src": "android-chrome-384X384.png",
       "sizes": "512x512",
       "type": "image/png"
     }
